@@ -8,6 +8,8 @@
   },
   "author": "Ed Bastarache",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "nodemon": "^1.12.1",
+    "reload": "^2.2.2"
   }
 }

@@ -23,7 +23,7 @@ router.get('/speakers', function(request, responce) {
     responce.send(`
         <h1>Title</h1>
         <ul>${info}</ul>
-                    
+        <script src="/reload/reload.js"></script>           
     `);
 });
 
@@ -54,6 +54,7 @@ router.get('/speakers/:index', function(request, responce) {
         </dl>
         <p>${speaker.about}</p>
         <a href="https://www.google.ca/maps/@${speaker.latitude},${speaker.longitude},15z?hl=en" class="btn btn-primary" target="_blank">Maps</a>
+        <script src="/reload/reload.js"></script>
     `);
 });
 
