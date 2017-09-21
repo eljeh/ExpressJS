@@ -8,7 +8,7 @@ router.get('/speakers', function(request, responce) {
 
     dataFile.speakers.forEach(function(item) {
         info +=`
-        <li> 
+        <li class="list-inline-item p-3">
             <div class="card" style="width: 20rem;">
                 <img class="card-img-top" src="${item.picture}" alt="Card image cap">
                 <div class="card-block">
@@ -22,7 +22,7 @@ router.get('/speakers', function(request, responce) {
     })
     responce.send(`
         <h1>Title</h1>
-        <ul>${info}</ul>
+        <ul class="list-inline">${info}</ul>
         <script src="/reload/reload.js"></script>           
     `);
 });

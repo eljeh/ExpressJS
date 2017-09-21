@@ -3,19 +3,19 @@ var router = express.Router();
 
 router.get('/', function(request, responce) {
     var data = request.app.get('appData');
+    var speakerNameList = [];
     var speakerPhotoList = [];
-    var speakerNameList = []
 
     data.speakers.forEach(function(item) {
-        speakerPhoto = speakerPhotoList.concat(item.picture);
-        speakerName = speakerNameList.concat(item.name);
+        speakerNameList = speakerNameList.concat(item.name);
+        speakerPhotoList = speakerPhotoList.concat(item.picture);
     })
 
     responce.render('index',{
         pageTitle: 'Home',
         pageID: 'home',
-        speakerPhoto: 'speakerPhoto',
-        SpeakerName: 'speakerName'
+        names: speakerNameList,
+        photos: speakerPhotoList
     });
 });
 

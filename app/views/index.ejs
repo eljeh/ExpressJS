@@ -24,13 +24,22 @@
               </div>  
             </article>
             <article>
-              <div>
-                <% if (speakerPhoto.length > 0) { %>
-                  <%  for (i=0; i< speakerPhoto.length; i++) { %>
-                  <img src="<%= speakerPhoto %>" alt="Photo: <%= speakerName %>">
+                <ul class="list-inline">
+
+                <% if (names.length > 0) { %>
+                  <%  for (i=0; i< names.length; i++) { %>
+                    <li class="list-inline-item p-3">
+                      <div class="card" style="width: 20rem;">
+                          <img class="card-img-top" src="<%= photos[i] %>" alt="<%= names[i] %>">
+                          <div class="card-block">
+                              <h4 class="card-title"><%= names[i] %> </h4>
+                          </div>
+                        </div>
+                      </li>
                   <%  } %>
-                  <% } %>
-              </div>
+                <% } %>
+
+                    </ul>
             </article>
             <div
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
