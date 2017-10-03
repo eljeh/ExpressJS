@@ -1,0 +1,22 @@
+
+<% if (names.length > 0) { %>
+    <%  for (i=0; i< names.length; i++) { %>
+      <li class="list-inline-item p-3">
+        <div class="card" style="width: 20rem;">
+          <a href="/speakers/<%= index[i] %> ">
+            <img class="card-img-top" src="<%= photos[i] %>" alt="<%= names[i] %>">
+          </a>
+            <div class="card-block">
+                <a href="/speakers/<%= index[i] %> ">
+                  <h4 class="card-title"><%= names[i] %> </h4>
+                </a>
+                <p class="card-text"><%= about[i] %></p>
+                <a href="/speakers/<%= index[i] %> " class="btn btn-primary" >More Info >></a>
+
+
+            </div>
+          </div>
+        </li>
+
+    <%  } %>
+  <% } %>

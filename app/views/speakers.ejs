@@ -1,0 +1,22 @@
+
+        <!DOCTYPE html>
+        <html>
+          <head><% include ./partials/templates/head.ejs %></head>
+          <body>
+
+            <main id="<%= pageID %>">
+
+                <h1><%= pageTitle %></h1>
+                    <ul class="list-inline">
+                  
+                        <% include ./partials/content/speakerlist.ejs %>
+    
+                    </ul>
+
+            </main>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="/reload/reload.js"></script>
+
+          </body>
+        </html>
